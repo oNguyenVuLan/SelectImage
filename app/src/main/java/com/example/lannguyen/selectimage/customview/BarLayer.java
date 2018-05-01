@@ -29,17 +29,21 @@ public class BarLayer extends LinearLayout {
     private void init(Context context) {
         mLayoutInflater = LayoutInflater.from(context);
         ViewGroup v = (ViewGroup) mLayoutInflater.inflate(R.layout.item_bar_layer, this, true);
-        mViewGroup = v;
+        mViewGroup = v.findViewById(R.id.content_layout);
 
     }
 
     public void addItems(List<ImageLayer> imageLayers) {
         if (mViewGroup != null) {
             for (ImageLayer imageLayer : imageLayers) {
-                LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(LayoutParams.WRAP_CONTENT,
+                LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(LayoutParams.MATCH_PARENT,
                         LayoutParams.WRAP_CONTENT);
                 layoutParams.weight = 1;
-                layoutParams.gravity = Gravity.CENTER;
+                layoutParams.bottomMargin = 5;
+                layoutParams.topMargin = 5;
+                layoutParams.leftMargin = 5;
+                layoutParams.rightMargin = 5;
+
                 imageLayer.setLayoutParams(layoutParams);
                 mViewGroup.addView(imageLayer);
             }
