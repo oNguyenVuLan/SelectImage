@@ -9,22 +9,31 @@ import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.Toast;
+
+import com.example.lannguyen.selectimage.customview.BarLayer;
+import com.example.lannguyen.selectimage.customview.ImageLayer;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements ImageLayer.OnImageListener {
 
     private static final int SELECT_IMAGE = 1;
     ImageView mImageView;
+    BarLayer mBarLayer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mImageView = findViewById(R.id.image_selection);
+        mBarLayer = findViewById(R.id.bar_layer);
+        addBar();
         mImageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -77,5 +86,21 @@ public class MainActivity extends AppCompatActivity {
             e.printStackTrace();
         }
         return false;
+    }
+
+    private void addBar() {
+        List<ImageLayer> list = new ArrayList<>();
+        for (int i = 0; i < 4; i++) {
+            ImageLayer imageLayer = new ImageLayer(this);
+            imageLayer.position = i;
+            imageLayer.setOnImageListener(this);
+            list.add(imageLayer);
+        }
+        mBarLayer.addItems(list);
+    }
+
+    @Override
+    public void onImageItemClick(int position) {
+        Toast.makeText(this, ""+position, Toast.LENGTH_SHORT).show();
     }
 }

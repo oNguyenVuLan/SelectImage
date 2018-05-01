@@ -1,14 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:gravity="center"
-    tools:context=".MainActivity">
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="horizontal"
+              tools:context=".MainActivity">
+
+    <com.example.lannguyen.selectimage.customview.BarLayer
+        android:id="@+id/bar_layer"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_gravity="center"
+        android:gravity="center"/>
 
     <ImageView
         android:id="@+id/image_selection"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:background="@color/colorAccent" />
+        android:background="@color/colorAccent"
+        android:visibility="gone"/>
 </LinearLayout>
