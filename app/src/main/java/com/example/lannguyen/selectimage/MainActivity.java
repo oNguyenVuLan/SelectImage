@@ -55,6 +55,7 @@ public class MainActivity extends AppCompatActivity implements ImageLayer.OnImag
         if (requestCode == SELECT_IMAGE && resultCode == Activity.RESULT_OK && data != null) {
             Bitmap bitmap;
             try {
+
                 bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), data.getData());
                 if (!isBiggerThan512Kb(data.getData())) {
                     mImageView.setImageBitmap(bitmap);

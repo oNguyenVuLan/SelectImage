@@ -36,7 +36,7 @@ public class BarLayer extends LinearLayout {
     public void addItems(List<ImageLayer> imageLayers) {
         if (mViewGroup != null) {
             for (ImageLayer imageLayer : imageLayers) {
-                LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(LayoutParams.MATCH_PARENT,
+                LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(LayoutParams.WRAP_CONTENT,
                         LayoutParams.WRAP_CONTENT);
                 layoutParams.weight = 1;
                 layoutParams.bottomMargin = 5;
