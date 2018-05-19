@@ -1,9 +1,10 @@
-package com.example.lannguyen.selectimage.customview;
+package com.example.lannguyen.selectimage.customview.customImage;
 
 import android.content.Context;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
@@ -32,15 +33,15 @@ public class ImageLayer extends RelativeLayout {
     private void init(Context context) {
         mLayoutInflater = LayoutInflater.from(context);
         View v = mLayoutInflater.inflate(R.layout.item_image_layer, this, true);
-        ImageView imageView = v.findViewById(R.id.image_view_adding);
-        imageView.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (mOnImageListener != null) {
-                    mOnImageListener.onImageItemClick(position);
-                }
-            }
-        });
+        EditText text = v.findViewById(R.id.image_view_adding);
+//        text.setOnClickListener(new OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                if (mOnImageListener != null) {
+//                    mOnImageListener.onImageItemClick(position);
+//                }
+//            }
+//        });
 
     }
 

@@ -1,9 +1,8 @@
-package com.example.lannguyen.selectimage.customview;
+package com.example.lannguyen.selectimage.customview.customPIN;
 
 import android.content.Context;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
@@ -36,7 +35,7 @@ public class BarLayer extends LinearLayout {
     public void addItems(List<ImageLayer> imageLayers) {
         if (mViewGroup != null) {
             for (ImageLayer imageLayer : imageLayers) {
-                LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(LayoutParams.WRAP_CONTENT,
+                LayoutParams layoutParams = new LayoutParams(LayoutParams.WRAP_CONTENT,
                         LayoutParams.WRAP_CONTENT);
                 layoutParams.weight = 1;
                 layoutParams.bottomMargin = 5;

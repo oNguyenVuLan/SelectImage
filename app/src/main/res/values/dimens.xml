@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="_3sdp">3dp</dimen>
+    <dimen name="bg_bound_dimens">5dp</dimen>
+    <dimen name="text_size">10sp</dimen>
+    <dimen name="margin_5dp">5dp</dimen>
+</resources>
