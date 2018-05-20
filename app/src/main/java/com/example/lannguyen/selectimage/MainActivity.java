@@ -1,6 +1,7 @@
 package com.example.lannguyen.selectimage;
 
 import android.app.Activity;
+import android.app.Service;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.Uri;
@@ -13,6 +14,7 @@ import android.text.SpannableString;
 import android.text.Spanned;
 import android.text.TextUtils;
 import android.text.TextWatcher;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -34,57 +36,7 @@ public class MainActivity extends AppCompatActivity implements ImageLayer.OnImag
     ImageView mImageView;
     BarLayer mBarLayer;
     EditText textHere;
-    EditText textInput1, textInput2, textInput3, textInput4, textInput5, textInput6, textHidden;
-    private TextWatcher textWatcher = new TextWatcher() {
-        @Override
-        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-            if (s.length() == 0) {
-                textInput1.setText("");
-                textInput2.setText("");
-                textInput3.setText("");
-                textInput4.setText("");
-                textInput5.setText("");
-                textInput6.setText("");
-            } else if (s.length() == 1) {
-                textInput1.setText(s.charAt(0) + "");
-                textInput2.setText("");
-                textInput3.setText("");
-                textInput4.setText("");
-                textInput5.setText("");
-                textInput6.setText("");
-            } else if (s.length() == 2) {
-                textInput2.setText(s.charAt(1) + "");
-                textInput3.setText("");
-                textInput4.setText("");
-                textInput5.setText("");
-                textInput6.setText("");
-            } else if (s.length() == 3) {
-                textInput3.setText(s.charAt(2) + "");
-                textInput4.setText("");
-                textInput5.setText("");
-                textInput6.setText("");
-            } else if (s.length() == 4) {
-                textInput4.setText(s.charAt(3) + "");
-                textInput5.setText("");
-                textInput6.setText("");
-            } else if (s.length() == 5) {
-                textInput5.setText(s.charAt(4) + "");
-                textInput6.setText("");
-            } else if (s.length() == 6) {
-                textInput6.setText(s.charAt(5) + "");
-            }
-        }
 
-        @Override
-        public void onTextChanged(CharSequence s, int start, int before, int count) {
-
-        }
-
-        @Override
-        public void afterTextChanged(Editable s) {
-
-        }
-    };
 
     public InputFilter getEditTextFilter() {
         return new InputFilter() {
@@ -130,7 +82,6 @@ public class MainActivity extends AppCompatActivity implements ImageLayer.OnImag
         mBarLayer = findViewById(R.id.bar_layer);
         textHere = findViewById(R.id.account_owner);
         textHere.setFilters(new InputFilter[]{getEditTextFilter()});
-        findView();
         // addBar();
 //        mImageView.setOnClickListener(new View.OnClickListener() {
 //            @Override
@@ -209,17 +160,5 @@ public class MainActivity extends AppCompatActivity implements ImageLayer.OnImag
         Toast.makeText(this, "" + position, Toast.LENGTH_SHORT).show();
     }
 
-    private void findView() {
-        textInput1 = findViewById(R.id.input_1);
-        textInput2 = findViewById(R.id.input_2);
-        textInput3 = findViewById(R.id.input_3);
-        textInput4 = findViewById(R.id.input_4);
-        textInput5 = findViewById(R.id.input_5);
-        textInput6 = findViewById(R.id.input_6);
-        textHidden = findViewById(R.id.hidden_input);
-    }
 
-    private void setEditTextListener() {
-        textHidden.addTextChangedListener(textWatcher);
-    }
 }

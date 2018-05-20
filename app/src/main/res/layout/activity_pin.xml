@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".PINActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:background="@drawable/bg_blue_gray"
+            android:padding="5dp">
+
+            <EditText
+                android:id="@+id/input_1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="@dimen/margin_5dp"
+                android:layout_marginStart="@dimen/margin_5dp"
+                android:layout_weight="1"
+                android:cursorVisible="false"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="1"
+                android:minEms="2"
+                android:textSize="@dimen/text_size"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:background="@drawable/bg_blue_gray"
+            android:padding="5dp">
+
+            <EditText
+                android:id="@+id/input_2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="@dimen/margin_5dp"
+                android:layout_marginStart="@dimen/margin_5dp"
+                android:layout_weight="1"
+                android:cursorVisible="false"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="1"
+                android:minEms="2"
+                android:textSize="@dimen/text_size"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:background="@drawable/bg_blue_gray"
+            android:padding="5dp">
+
+            <EditText
+                android:id="@+id/input_3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="@dimen/margin_5dp"
+                android:layout_marginStart="@dimen/margin_5dp"
+                android:layout_weight="1"
+                android:cursorVisible="false"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="1"
+                android:minEms="2"
+                android:textSize="@dimen/text_size"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:background="@drawable/bg_blue_gray"
+            android:padding="5dp">
+
+            <EditText
+                android:id="@+id/input_4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="@dimen/margin_5dp"
+                android:layout_marginStart="@dimen/margin_5dp"
+                android:layout_weight="1"
+                android:cursorVisible="false"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="1"
+                android:minEms="2"
+                android:textSize="@dimen/text_size"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:background="@drawable/bg_blue_gray"
+            android:padding="5dp">
+
+            <EditText
+                android:id="@+id/input_5"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="@dimen/margin_5dp"
+                android:layout_marginStart="@dimen/margin_5dp"
+                android:layout_weight="1"
+                android:cursorVisible="false"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="1"
+                android:minEms="2"
+                android:textSize="@dimen/text_size"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:background="@drawable/bg_blue_gray"
+            android:padding="5dp">
+
+            <EditText
+                android:id="@+id/input_6"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="@dimen/margin_5dp"
+                android:layout_marginStart="@dimen/margin_5dp"
+                android:layout_weight="1"
+                android:cursorVisible="false"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="1"
+                android:minEms="2"
+                android:textSize="@dimen/text_size"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/hidden_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:inputType="number"
+        android:maxLength="6"
+       />
+</LinearLayout>
